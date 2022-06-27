@@ -1,6 +1,7 @@
 version: '3.3'
 services:
-  app:
-    image: test:test
+  scratch-nuitka-flask:
+    container_name: scratch-nuitka-flask
+    image: scratch-nuitka-flask
     ports:
       - "8080:8080"
