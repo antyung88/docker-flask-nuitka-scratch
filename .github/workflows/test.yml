@@ -18,7 +18,7 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{ secrets.GH_TOKEN }}
       - run: |
-          docker build . -t ghcr.io/antyung88/${{ secrets.IMAGE }}:test
+          docker build . -t ghcr.io/${{ secrets.USER }}/${{ secrets.IMAGE }}:test
           docker-compose -f .github/docker-compose-test.yml up -d
           sleep 5
           docker logs scratch-nuitka-flask-test 2>&1 | grep "Running on all addresses (0.0.0.0)"
