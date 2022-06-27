@@ -40,7 +40,7 @@ ENV PATH="/bin:${PATH}"
 COPY --from=ghcr.io/antyung88/scratch-sh:stable /lib /lib
 COPY --from=ghcr.io/antyung88/scratch-sh:stable /bin /bin
 
-COPY --from=base /var/app/main.bin /main.bin
+COPY --from=base /code/app/main.bin /main.bin
 COPY --from=base /lib/x86_64-linux-gnu/libc.so.6 /lib/x86_64-linux-gnu/libc.so.6
 COPY --from=base /lib64/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2
 COPY --from=base /lib/x86_64-linux-gnu/libdl.so.2 /lib/x86_64-linux-gnu/libdl.so.2
