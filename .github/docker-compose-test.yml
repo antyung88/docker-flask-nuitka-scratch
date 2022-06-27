@@ -2,6 +2,6 @@ version: '3.3'
 services:
   scratch-nuitka-flask-test:
     container_name: scratch-nuitka-flask-test
-    build: ../.
+    image: ghcr.io/antyung88/scratch-nuitka-flask:test
     ports:
       - "8080:8080"
